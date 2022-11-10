@@ -1,0 +1,551 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #1e2b40;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Ukraine {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1e2b40;
+    text-align: center;
+    color: white;
+    padding: 1%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+#ua {
+    font-size: 14px;
+    color: white;
+}
+
+#donate {
+    text-decoration: underline;
+    color: white;
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0%;
+    margin: 0px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+}
+
+#nav>div:last-child {
+    display: flex;
+}
+
+#nav>div:last-child ul {
+    display: flex;
+    list-style: none;
+}
+
+#nav>div:last-child ul>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nav>div:last-child ul>div>button {
+    width: 80px;
+    margin-left: 10px;
+    height: 30px;
+}
+
+#nav>div:last-child ul li {
+    margin: 7px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+#nav>div:last-child ul li a {
+    text-decoration: none;
+    color: #1e2b40;
+}
+
+#nav>div:last-child ul li a:hover {
+    color: #778baa;
+}
+
+.dropdown {
+    display: none;
+}
+
+#nav>div:last-child ul li:hover .dropdown {
+    display: block;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 15px;
+    margin-left: -30px;
+    opacity: 100%;
+}
+
+#nav>div:last-child ul li:hover .dropdown ul {
+    display: block;
+    margin: 10px;
+}
+
+#nav>div:last-child ul li:hover .dropdown ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted;
+}
+
+.disc {
+    margin-top: 6%;
+    margin-bottom: 4%;
+}
+
+.dis {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.button {
+    padding: 1%;
+    background-color: rgb(94, 218, 102);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.button>a {
+    text-decoration-line: none;
+}
+
+.loginbutton {
+    padding: 1%;
+    background-color: white;
+    border: 1px solid #1e2b40;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginbutton>a {
+    text-decoration-line: none;
+}
+
+#lang {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+
+#lang>img {
+    width: 6%;
+}
+
+#video {
+    margin: auto;
+    width: 60%;
+}
+
+#video>img:first-child {
+    width: 100%;
+}
+
+.playbutton {
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    top: 125%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#video>img:first-child:hover .playbutton {
+    width: 100px;
+}
+
+#player {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 125%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+video:focus {
+    outline: none;
+}
+
+#close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.middlehead {
+    margin-top: 5%;
+}
+
+#middletop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 65%;
+    margin: auto;
+    gap: 20% 4%;
+    margin-top: 2%;
+}
+
+#middletop>div {
+    display: flex;
+    margin-left: 1%;
+}
+
+#middletop>div>img {
+    margin-left: 1%;
+    margin-right: 3%;
+    width: 60px;
+}
+
+#middletop>div>div>p {
+    text-align: left;
+    margin-top: 5%;
+    font-size: 12px;
+    color: grey
+}
+
+#middletop>div>div>h4 {
+    text-align: left;
+    margin-top: 4%;
+}
+
+#setup {
+    margin-top: 15%;
+    padding: 6%;
+    background-color: whitesmoke;
+    height: 555px;
+}
+
+#setup>div {
+    display: flex;
+    width: 68%;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+    margin-top: 2%;
+}
+
+#setup>div>img {
+    width: 450px;
+}
+
+#setup>h1 {
+    margin-bottom: 2%;
+}
+
+#setup>p {
+    font-size: 12px;
+    color: rgb(61, 58, 58);
+}
+
+#setup>div>ul {
+    margin-left: 4%;
+}
+
+#setup>div>ul>li {
+    text-align: left;
+    margin-top: 8%;
+    font-weight: bold;
+}
+
+#use {
+    margin-top: 4%;
+}
+
+#use>img {
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+#dqm {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+#dqm>ul {
+    width: 26%;
+    text-align: left;
+}
+
+#dqm>ul>h4 {
+    text-align: left;
+    margin-bottom: 7%;
+    margin-left: -7%;
+}
+
+#dqm>ul>li {
+    text-align: left;
+    margin-bottom: 8%;
+}
+
+#lastbtn {
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.box {
+    position: relative;
+}
+
+.box {
+    background-color: whitesmoke;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 5%;
+    padding-bottom: 10%;
+    height: 580px;
+}
+
+.box>h1 {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.swiper {
+    width: 65%;
+    height: 70%;
+
+}
+
+.swiper-slide {
+    text-align: left;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.swiper-slide>div {
+    padding: 5%;
+    margin-top: 8%;
+    margin-right: 6%;
+
+}
+
+.swiper-slide>div>div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.swiper-slide>div>div>p {
+    font-size: 12px;
+    text-align: left;
+    color: #778baa;
+}
+
+.swiper-slide>div>p:last-child {
+    color: #778baa;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 2%;
+}
+
+.swiper-slide>div>p:nth-child(2) {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 2%;
+}
+
+.swiper-slide>div>div>p:hover,
+.swiper-slide>div>p:last-child:hover {
+    color: rgb(22, 93, 199);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 120%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 0;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: black;
+    opacity: 80%;
+}
+
+.trusted>div {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.trusted>div>img {
+    width: 80px;
+    height: 40px;
+}
+
+.trusted>h1:first-child {
+    margin-top: 5%;
+}
+
+.faq {
+    background-color: whitesmoke;
+    height: 800px;
+}
+
+.faq>h1 {
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
+
+.faq>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    margin: auto;
+    gap: 6% 4%;
+}
+
+.faq>div>div {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    height: 250px;
+    background-color: white;
+    padding: 13% 5% 0 8%;
+
+}
+
+.faq>div>div>h3 {
+    text-align: left;
+}
+
+.faq>div>div>p {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 4%;
+}
+
+#signupdiv {
+    display: flex;
+    background-color: #1e2b40;
+    align-items: center;
+    height: 370px;
+}
+
+#signupdiv>div {
+    padding-left: 20%;
+    text-align: left;
+}
+
+#signupdiv>div>h3 {
+    color: white;
+    text-align: left;
+    font-size: 25px;
+}
+
+#signupdiv>div>h1 {
+    color: white;
+    text-align: left;
+    font-size: 55px;
+}
+
+#signupdiv>div>button {
+    padding: 5% 7%;
+    margin-top: 7%;
+}
+
+#signupdiv>img {
+    padding-left: 19%;
+}
+
+#bottom {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#bottom>div {
+    display: flex;
+}
+
+#bottom>div>img {
+    width: 80px;
+    height: 80px;
+    margin-left: 12%;
+    border-radius: 0 25px 0 25px;
+    border: none;
+    cursor: pointer;
+}
+
+#bottom>div>img:hover {
+    border: 3px solid rgb(94, 218, 102);
+    transition: 6ms;
+}
+
+#bottom>div>div {
+    display: flex;
+    margin-left: 15%;
+}
+
+#bottom>div>div>ul {
+    width: 300px;
+    list-style: none;
+}
+
+#bottom>div>div>ul>h3 {
+    text-align: left;
+    margin-bottom: 8%;
+}
+
+#bottom>div>div>ul>li {
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 8%;
+    cursor: pointer;
+}
+
+#bottom>div>div>ul>li:hover {
+    color: rgb(94, 218, 102);
+    transition: 10ms;
+}
+
+#bottom>div>div>ul:last-child>li>div {
+    display: flex;
+    gap: 20px;
+}
+
+#bottom>div>div>ul:last-child>li>div>img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#bottom>div>div>ul:last-child>li:last-child {
+    margin-top: 162px;
+    cursor: auto;
+}
+
+#bottom>div>div>ul:last-child>li:last-child:hover {
+    color: black;
+}
