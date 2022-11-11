@@ -37,6 +37,7 @@
     margin: 0px;
     padding-top: 1%;
     padding-bottom: 1%;
+    width: 100%;
 }
 
 #nav>div:last-child {
@@ -85,6 +86,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 15px;
     margin-left: -30px;
+    opacity: 100%;
 }
 
 #nav>div:last-child ul li:hover .dropdown ul {
@@ -116,6 +118,11 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
+}
+
+.button>a {
+    text-decoration-line: none;
 }
 
 .loginbutton {
@@ -124,6 +131,10 @@
     border: 1px solid #1e2b40;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.loginbutton>a {
+    text-decoration-line: none;
 }
 
 #lang {
@@ -221,7 +232,7 @@ video:focus {
     margin-top: 15%;
     padding: 6%;
     background-color: whitesmoke;
-    height: 450px;
+    height: 555px;
 }
 
 #setup>div {
@@ -234,7 +245,7 @@ video:focus {
 }
 
 #setup>div>img {
-    width: 350px;
+    width: 450px;
 }
 
 #setup>h1 {
@@ -265,30 +276,276 @@ video:focus {
     margin-bottom: 5%;
 }
 
-#dqm{
+#dqm {
     display: flex;
     justify-content: space-around;
     width: 80%;
     margin: auto;
 }
 
-#dqm>ul{
+#dqm>ul {
     width: 26%;
     text-align: left;
 }
 
-#dqm>ul>h4{
+#dqm>ul>h4 {
     text-align: left;
     margin-bottom: 7%;
     margin-left: -7%;
 }
 
-#dqm>ul>li{
+#dqm>ul>li {
     text-align: left;
     margin-bottom: 8%;
 }
 
-#lastbtn{
+#lastbtn {
     margin-top: 6%;
     margin-bottom: 6%;
+}
+
+.box {
+    position: relative;
+}
+
+.box {
+    background-color: whitesmoke;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 5%;
+    padding-bottom: 10%;
+    height: 580px;
+}
+
+.box>h1 {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.swiper {
+    width: 65%;
+    height: 70%;
+
+}
+
+.swiper-slide {
+    text-align: left;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.swiper-slide>div {
+    padding: 5%;
+    margin-top: 8%;
+    margin-right: 6%;
+
+}
+
+.swiper-slide>div>div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.swiper-slide>div>div>p {
+    font-size: 12px;
+    text-align: left;
+    color: #778baa;
+}
+
+.swiper-slide>div>p:last-child {
+    color: #778baa;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 2%;
+}
+
+.swiper-slide>div>p:nth-child(2) {
+    text-align: left;
+    font-size: 15px;
+    margin-top: 2%;
+}
+
+.swiper-slide>div>div>p:hover,
+.swiper-slide>div>p:last-child:hover {
+    color: rgb(22, 93, 199);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 120%;
+    height: 30%;
+    object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 0;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: black;
+    opacity: 80%;
+}
+
+.trusted>div {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.trusted>div>img {
+    width: 80px;
+    height: 40px;
+}
+
+.trusted>h1:first-child {
+    margin-top: 5%;
+}
+
+.faq {
+    background-color: whitesmoke;
+    height: 800px;
+}
+
+.faq>h1 {
+    padding-top: 5%;
+    margin-bottom: 5%;
+}
+
+.faq>div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+    margin: auto;
+    gap: 6% 4%;
+}
+
+.faq>div>div {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    height: 250px;
+    background-color: white;
+    padding: 13% 5% 0 8%;
+
+}
+
+.faq>div>div>h3 {
+    text-align: left;
+}
+
+.faq>div>div>p {
+    text-align: left;
+    font-size: 13px;
+    margin-top: 4%;
+}
+
+#signupdiv {
+    display: flex;
+    background-color: #1e2b40;
+    align-items: center;
+    height: 370px;
+}
+
+#signupdiv>div {
+    padding-left: 20%;
+    text-align: left;
+}
+
+#signupdiv>div>h3 {
+    color: white;
+    text-align: left;
+    font-size: 25px;
+}
+
+#signupdiv>div>h1 {
+    color: white;
+    text-align: left;
+    font-size: 55px;
+}
+
+#signupdiv>div>button {
+    padding: 5% 7%;
+    margin-top: 7%;
+}
+
+#signupdiv>img {
+    padding-left: 19%;
+}
+
+#bottom {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#bottom>div {
+    display: flex;
+}
+
+#bottom>div>img {
+    width: 80px;
+    height: 80px;
+    margin-left: 12%;
+    border-radius: 0 25px 0 25px;
+    border: none;
+    cursor: pointer;
+}
+
+#bottom>div>img:hover {
+    border: 3px solid rgb(94, 218, 102);
+    transition: 6ms;
+}
+
+#bottom>div>div {
+    display: flex;
+    margin-left: 15%;
+}
+
+#bottom>div>div>ul {
+    width: 300px;
+    list-style: none;
+}
+
+#bottom>div>div>ul>h3 {
+    text-align: left;
+    margin-bottom: 8%;
+}
+
+#bottom>div>div>ul>li {
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 8%;
+    cursor: pointer;
+}
+
+#bottom>div>div>ul>li:hover {
+    color: rgb(94, 218, 102);
+    transition: 10ms;
+}
+
+#bottom>div>div>ul:last-child>li>div {
+    display: flex;
+    gap: 20px;
+}
+
+#bottom>div>div>ul:last-child>li>div>img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#bottom>div>div>ul:last-child>li:last-child {
+    margin-top: 162px;
+    cursor: auto;
+}
+
+#bottom>div>div>ul:last-child>li:last-child:hover {
+    color: black;
 }

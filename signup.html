@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #signup-nav {
+            display: flex;
+            padding: 1%;
+        }
+
+        #signup-nav>div:first-child {
+            margin-left: 11%;
+        }
+
+        #signup-nav>div:last-child {
+            width: 200px;
+            display: flex;
+            gap: 10px;
+            margin-left: 56%;
+            align-items: center;
+        }
+
+        #signup-nav>div:last-child>button {
+            height: 35px;
+            padding: 1% 10%;
+        }
+
+        #signup-nav>div:last-child>button:first-child>a {
+            color: #1e2b40;
+        }
+
+        #signup-nav>div:last-child>button:last-child>a {
+            color: white;
+        }
+
+        a {
+            font-weight: bold;
+        }
+
+        .signup-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: auto;
+            margin-top: 5%;
+        }
+
+        .signup-container>div {
+            height: 500px;
+        }
+
+        .signup-container>div>h1 {
+            text-align: left;
+            font-size: 35px;
+            margin-bottom: -6%;
+        }
+
+        .signup-container>div>p {
+            font-size: 15px;
+        }
+
+        .signup-container>div>p>span {
+            color: rgba(73, 148, 245, 0.877);
+            cursor: pointer;
+        }
+
+        .signup-container>div>p>span:hover {
+            text-decoration: underline;
+        }
+
+        .signup-container>div:first-child {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            width: 380px;
+            gap: 3%;
+        }
+
+        .signup-container>div:first-child>button {
+            background-color: white;
+            border: 1px solid #1e2b40;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .signup-container>div:first-child>button:nth-child(2):hover,
+        .signup-container>div:first-child>button:nth-child(3):hover,
+        .signup-container>div:first-child>button:nth-child(4):hover {
+            background-color: #1e2b40;
+            color: white;
+            transition: 0.14ms;
+        }
+
+        .signup-container>div:first-child>button:nth-child(5) {
+            border: none;
+            cursor: auto;
+        }
+
+        .signup-container>div:first-child>button:nth-child(5):hover {
+            background-color: none;
+        }
+
+        .signup-container>div:first-child>button:nth-child(6):hover {
+            background-color: rgb(179, 245, 184);
+            transition: 0.14ms;
+        }
+
+        .signup-container>div:last-child {
+            padding-top: 7%;
+            padding-right: 5%;
+        }
+
+        .signup-container>div>div {
+            display: flex;
+            margin-top: 5%;
+            margin-left: 20%;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="signup-nav">
+        <div>
+            <a href="index.html"><img src="https://mailtrap.io/wp-content/uploads/2021/04/mailtrap-new-logo.svg"
+                    alt="logo"></a>
+        </div>
+        <div>
+            <button class="loginbutton"><a href="login.html">Log In</a></button>
+            <button class="button"><a href="signup.html">Sign Up</a></button>
+        </div>
+    </div>
+    <div class="signup-container">
+        <div>
+            <h1>Create Free Account</h1>
+            <button>Use Google account</button>
+            <button>Use Github account</button>
+            <button>Use Office 365 account</button>
+            <button>OR</button>
+            <button class="button" style="background-color: rgb(94, 218, 102); border: none;">Sign Up With Your
+                Email.com</button>
+            <p>By creating a Mailtrap account, you agree to our <span>Terms of Service</span> and <span>Privacy
+                    Policy.</span> We'll occasionally send you account related emails.</p>
+        </div>
+        <div>
+            <img src="https://assets.mailtrap.io/packs/assets/landing/signup-29d04f096f43afe622ed.svg" alt="1">
+            <div>
+                <img src="https://assets.mailtrap.io/packs/assets/landing/no-cc-f64815040928cb2cd45e.svg" alt="">
+                <h4>No credit card needed</h4>
+            </div>
+            <div>
+                <img src="https://assets.mailtrap.io/packs/assets/landing/no-contract-6c7fcc24afc64e708f1d.svg" alt="">
+                <h4>No contract needed</h4>
+            </div>
+        </div>
+    </div>
+    <div id="bottom" style="background-color :whitesmoke; padding-top: 3%; padding-bottom: 3%;">
+        <div>
+            <img src="images/download.png" alt="">
+            <div>
+                <ul>
+                    <h3>Mailtrap</h3>
+                    <li>Pricing</li>
+                    <li>Changelog</li>
+                    <li>Status</li>
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                    <li>Navigational Information</li>
+                    <li>DPA</li>
+                </ul>
+                <ul>
+                    <h3>Railsware Experience</h3>
+                    <li>Mailtrap Blog</li>
+                    <li>Coupler.io</li>
+                    <li>Smart Checklist for Jira</li>
+                    <li>Careers–Railsware Hiring</li>
+                </ul>
+                <ul>
+                    <h3>Contact</h3>
+                    <li>email: support@mailtrap.io</li>
+                    <li>
+                        <div>
+                            <img src="images/facebook.png" alt="">
+                            <img src="images/twitter.png" alt="">
+                            <img src="images/linkedin.png" alt="">
+                        </div>
+                    </li>
+                    <li>feedbacks*</li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-left:12%; margin-top: 8%;">
+            <p>© Railsware Products Studio, Inc.</p>
+        </div>
+        <div style="display: block; text-align: left; margin-left: 32%; width: 900px;
+        margin-top: -6%;">
+            <h3 style="text-align: left;">What is Mailtrap?</h3>
+            <p style="text-align: left;">Mailtrap is a test mail server solution that allows testing email notifications without sending
+                them to the real users of your application. Not only does Mailtrap work as a powerful email test
+                tool, it also lets you view your dummy emails online, forward them to your regular mailbox,
+                share with the team and more! Mailtrap is a mail server test tool built by Railsware Products,
+                Inc., a premium software development consulting company.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
