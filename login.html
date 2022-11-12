@@ -97,6 +97,7 @@
             background-color: white;
             border: 1px solid #1e2b40;
             border-radius: 10px;
+            text-align: left;
         }
         .signup-container>div:first-child>button:nth-child(2):hover,
         .signup-container>div:first-child>button:nth-child(3):hover,
@@ -144,11 +145,11 @@
     <div class="signup-container">
         <div>
             <h1>Create Free Account</h1>
-            <button>Use Google account</button>
-            <button>Use Github account</button>
-            <button>Use Office 365 account</button>
+            <button onclick="google()">Use Google account</button>
+            <button onclick="github()">Use Github account</button>
+            <button onclick="office()">Use Office 365 account</button>
             <button>OR</button>
-            <input type="text" placeholder="username or email">
+            <input type="text" placeholder=" username or email">
             <button class="button" style="background-color: rgb(94, 218, 102); border: none;">Next</button>
             <p>Haven't received the confirmation email yet?<span>Resend the email</span></p>
         </div>
@@ -215,3 +216,16 @@
 </body>
 
 </html>
+<script>
+    function google(){
+        window.location='https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?access_type=offline&client_id=495126761595-3v7fijq7t51cguc5i8ibpi53ttik3j1l.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmailtrap.io%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email%20profile&state=63761f56a59d5b2fdd6577104d3ed56c53cbb9a839098212&service=lso&o2v=1&flowName=GeneralOAuthFlow';
+    }
+
+    function github(){
+        window.location='https://github.com/login/oauth/authorize?client_id=744fecc5148a94851a58&redirect_uri=https%3A%2F%2Fmailtrap.io%2Fauth%2Fgithub%2Fcallback&response_type=code&scope=user%3Aemail&state=6226b09a3eea3175aa71c9c58de128fdb867b6bda4bc410b';
+    }
+
+    function office(){
+        window.location='https://login.live.com/oauth20_authorize.srf?client_id=b2656ee8-e6f3-494b-bde9-5d9d9c8fcd84&scope=openid+email+profile+User.Read&redirect_uri=https%3a%2f%2fmailtrap.io%2fauth%2fmicrosoft_office365%2fcallback&response_type=code&state=25b449c6db5ef2148ff28e3d992e82b1f6c1208852a59206&uaid=d556749cc29f432289b7d476f5c3a1f1&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&epct=AQABAAAAAAD--DLA3VO7QrddgJg7Wevre-tkgW26RqkuK86oyPWy3LGaWCMro-7iweBYFvlL8NaJ2u6boM6ZUKMJens6FQ3lQ7I0kLfSaoGgE2uJ0ODlVAIidpY8YULDAaXkwYflA9gWwOKDTAF1AmvKjI3ddCqG_J5-kmUl4khiPBO7Il7j0DP1zM--5XtB4WN_-m7TvGHeIi_uL-oaaxdN6riGIA1t8-4sFSlHxy7l3gidqZEPwyAA&jshs=0';
+    }
+</script>

@@ -7,6 +7,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#nav-container{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
 #Ukraine {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #1e2b40;
@@ -35,9 +40,10 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 0%;
     margin: 0px;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 0;
+    padding-bottom: 0;
     width: 100%;
+    background-color: white;
 }
 
 #nav>div:last-child {
@@ -62,8 +68,8 @@
 }
 
 #nav>div:last-child ul li {
-    margin: 7px;
-    padding: 7px;
+    margin: 10px;
+    padding: 13px;
     font-weight: bold;
 }
 
@@ -74,19 +80,21 @@
 
 #nav>div:last-child ul li a:hover {
     color: #778baa;
+    transition: 1s;
 }
 
 .dropdown {
     display: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    margin-top: 25px;
+    margin-left: -100px;
+    padding: 3%;
 }
 
 #nav>div:last-child ul li:hover .dropdown {
     display: block;
     position: absolute;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-top: 15px;
-    margin-left: -30px;
-    opacity: 100%;
 }
 
 #nav>div:last-child ul li:hover .dropdown ul {
@@ -101,8 +109,9 @@
 }
 
 .disc {
-    margin-top: 6%;
+    margin-top: 15%;
     margin-bottom: 4%;
+    font-size: 45px;
 }
 
 .dis {
@@ -162,7 +171,7 @@
     width: 50px;
     position: absolute;
     left: 50%;
-    top: 125%;
+    top: 130%;
     transform: translate(-50%, -50%);
     cursor: pointer;
 }
