@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mailtrap with VK_18</title>
+    <link rel="icon" type="image/x-icon"
+        href="images/Beige Green Creative Decorative Typography Monogram Business Logo.jpg">
+    <style>
+        #main {
+            display: flex;
+        }
+
+        #main>div>img {
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+
+        #main>div>div {
+            margin-top: 25%;
+        }
+
+        #main>div:first-child>div>div>img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #main>div:first-child {
+            width: 200px;
+            height: justify;
+        }
+
+        #main>div:first-child>div>div {
+            margin-top: 3%;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        #main>div:first-child>div>div:first-child {
+            background-color: antiquewhite;
+        }
+
+        #main>div:first-child>div>div:hover {
+            background-color: antiquewhite;
+        }
+
+        #main>div:last-child>div:first-child {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 7px;
+            margin-left: 10px;
+            width: 1300px;
+            align-items: center;
+        }
+
+        #main>div:last-child>div:first-child>img {
+            width: 25px;
+            height: 25px;
+        }
+
+        #main>div:last-child>div:nth-child(2) {
+            display: flex;
+            width: 400px;
+            margin-top: 5%;
+            margin-left: 5%;
+            gap: 5%;
+        }
+
+        #main>div:last-child>div:nth-child(2)>div>div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #main>div:last-child>div:nth-child(2)>div>ul>li {
+            list-style: none;
+        }
+
+        #main>div:last-child>div:nth-child(2)>div>ul>li {
+            height: auto;
+            border-bottom: 1px dotted;
+            cursor: pointer;
+        }
+        #main>div:last-child>div:nth-child(2)>div>ul>li:hover{
+            color: #525c6b;
+        }
+
+        #main>div:last-child>div:nth-child(2)>div>ul>li:last-child {
+            border-bottom: none;
+        }
+
+        #main>div:last-child>div:nth-child(2)>div>ul>li>p {
+            display: none;
+        }
+
+        button {
+            padding: 10%;
+            margin-left: -20%;
+            background-color: #1e2b40;
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #4f6383;
+        }
+        #img{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="hide">
+            <img src="https://mailtrap.io/wp-content/uploads/2021/04/mailtrap-new-logo.svg" alt="log" id="img" onclick="img()">
+            <div>
+                <div>
+                    <img src="images/home.png" alt="1">
+                    <h3>Home</h3>
+                </div>
+                <div>
+                    <img src="images/email.png" alt="2">
+                    <h3>Email API</h3>
+                </div>
+                <div>
+                    <img src="images/send.png" alt="3">
+                    <h3>Sandbox</h3>
+                </div>
+                <div>
+                    <img src="images/invoice.png" alt="4">
+                    <h3>Billing</h3>
+                </div>
+                <div>
+                    <img src="images/user.png" alt="5">
+                    <h3>User Management</h3>
+                </div>
+                <div>
+                    <img src="images/key.png" alt="6">
+                    <h3>API</h3>
+                </div>
+                <div>
+                    <img src="images/files.png" alt="7">
+                    <h3>Acount Setting</h3>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="images/burger-bar.png" alt="" onclick="hide()" style="cursor:pointer;">
+                <h3>Vivek Sangode</h3>
+            </div>
+            <div>
+                <div>
+                    <img src="https://assets.mailtrap.io/packs/assets/media/sandbox-inactive-74f82ada44702b76a860.svg"
+                        alt="">
+                    <div>
+                        <div>
+                            <h1>Sandbox</h1>
+                            <p>Test Emails on Staging</p>
+                        </div>
+                        <div>
+                            <button>Setup Inbox</button>
+                        </div>
+                    </div>
+                    <ul>
+                        <li onclick="down()">Fake SMTP Server
+                            <p>Capture SMTP traffic from staging and dev environments.</p>
+                        </li>
+                        <li onclick="down()">QA Automation
+                            <p>Cover all your testing scenarios with Mailtrap’s well-documented API.</p>
+                        </li>
+                        <li onclick="down()">Preview and validate HTML/CSS
+                            <p>View messages, check spam scores, validate headers. Check the HTML & CSS support for top
+                                email clients.</p>
+                        </li>
+                        <li onclick="down()">Inbox email address
+                            <p>Dedicated email address for each of your Inboxes to send messages from other email
+                                accounts or from your application.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://assets.mailtrap.io/packs/assets/media/email-api-inactive-2b963546ca2b49da77d3.svg"
+                        alt="">
+                    <div>
+                        <div>
+                            <h1>Email API</h1>
+                            <p>Send Emails on Production</p>
+                        </div>
+                        <div>
+                            <button>Setup Domain</button>
+                        </div>
+                    </div>
+                    <ul>
+                        <li onclick="down()">SMTP Service, API/SDK
+                            <p>Integrate with our scalable cloud MTA cluster to send your production emails.
+                                Well-documented API compatible with common email providers.</p>
+                        </li>
+                        <li onclick="down()">SPF, DKIM, DMARC, Dedicated IP
+                            <p>SPF, DKIM, DMARC configuration aligned with major mailbox providers (GMail, Outlook,
+                                ProtonMail, Yahoo, etc.). Dedicated IPs. Support and monitoring by deliverability
+                                experts.</p>
+                        </li>
+                        <li onclick="down()">Deliverability Alerts
+                            <p>Special alerts similar to servers performance monitoring. Triggered by drop in vital
+                                metrics such as bounces, open, click and spam rates.</p>
+                        </li>
+                        <li onclick="down()">Email content and logs
+                            <p>60 days of content retention. Detailed diagnostic logs. Rich filters. History of events.
+                                Email preview. Spam and blocklist analysis.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function down() {
+        document.querySelector("#main>div:last-child>div:nth-child(2)>div>ul>li>p").style.display = "block";
+    }
+
+    function hide(){
+        document.querySelector("#hide").style.display = "none";
+    }
+    
+    function img() {
+        window.location.href = "index.html";
+    }
+</script>

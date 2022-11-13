@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mailtrap with VK_18</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="images/Beige Green Creative Decorative Typography Monogram Business Logo.jpg">
     <style>
         * {
             margin: 0px;
@@ -269,10 +270,10 @@
             let email = document.querySelector("#email").value;
             let password = document.querySelector("#password").value;
             let confirm = document.querySelector("#confirm").value;
-            if (email == "" || password == "" || confirm == ""){
+            if (email == "" || password == "" || confirm == "") {
                 alert("please fill Email and password");
-            }else{
-                let bag = JSON.parse(localStorage.getItem("registeredData"))||[];
+            } else {
+                let bag = JSON.parse(localStorage.getItem("registeredData")) || [];
                 let obj = {
                     email,
                     password,
@@ -280,7 +281,7 @@
                 }
                 bag.push(obj);
                 console.log(obj);
-                localStorage.setItem("registeredData",JSON.stringify(bag));
+                localStorage.setItem("registeredData", JSON.stringify(bag));
                 document.querySelector("#email").value = "";
                 document.querySelector("#password").value = "";
                 document.querySelector("#confirm").value = "";
