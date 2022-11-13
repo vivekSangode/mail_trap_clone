@@ -57,7 +57,7 @@
         }
 
         .signup-container>div {
-            height: 800px;
+            height: 500px;
         }
 
         .signup-container>div>h1 {
@@ -98,7 +98,7 @@
         .signup-container>div:first-child>button:nth-child(4):hover {
             background-color: #1e2b40;
             color: white;
-            transition: 0.14ms;
+            transition: 0.14s;
         }
 
         .signup-container>div:first-child>button:nth-child(5) {
@@ -106,13 +106,17 @@
             cursor: auto;
         }
 
-        .signup-container>div:first-child>button:nth-child(5):hover {
-            background-color: none;
+        .button:hover,
+        #btn:hover {
+            background-color: rgb(154, 207, 158);
+            transition: 0.14s;
         }
 
-        .signup-container>div:first-child>button:nth-child(6):hover {
-            background-color: rgb(179, 245, 184);
-            transition: 0.14ms;
+        #btn {
+            background-color: rgb(94, 218, 102);
+            border: none;
+            color: white;
+            font-weight: bold;
         }
 
         .signup-container>div:last-child {
@@ -127,26 +131,26 @@
             gap: 10px;
         }
 
-        .signup-container>div:first-child>div{
-            display: none;
-        }
         .signup-container>div:first-child>div {
-            display: grid;
+            display: none;
             grid-template-columns: repeat(1, 1fr);
             width: 380px;
             height: 300px;
             margin: auto;
             margin-top: -3%;
         }
-        .signup-container>div:first-child>div>p{
+
+        .signup-container>div:first-child>div>p {
             height: 20px;
             text-align: left;
         }
-        .signup-container>div:first-child>div>p+input{
+
+        .signup-container>div:first-child>div>p+input {
             margin-top: -10%;
             margin-bottom: 5%;
             text-align: left;
             font-size: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -171,14 +175,13 @@
             <button>OR</button>
             <div class="block">
                 <p>Email</p>
-                <input type="text">
+                <input type="email" id="email">
                 <p>Password</p>
-                <input type="password">
+                <input type="password" id="password">
                 <p>Confirmation</p>
-                <input type="password">
+                <input type="password" id="confirm">
             </div>
-            <button class="button" style="background-color: rgb(94, 218, 102); border: none;"
-                onclick="signupblock()">Sign Up With Your Email.com</button>
+            <button id="btn" onclick="signupblock()">Sign Up With Your Email</button>
             <p>By creating a Mailtrap account, you agree to our <span>Terms of Service</span> and <span>Privacy
                     Policy.</span> We'll occasionally send you account related emails.</p>
         </div>
@@ -262,6 +265,33 @@
     }
 
     function signupblock() {
-       document.querySelector("#.signup-container>div:first-child>div").style.display = "grid";
+        if (document.querySelector("#btn").innerText == "Sign Up") {
+            let email = document.querySelector("#email").value;
+            let password = document.querySelector("#password").value;
+            let confirm = document.querySelector("#confirm").value;
+            if (email == "" || password == "" || confirm == ""){
+                alert("please fill Email and password");
+            }else{
+                let bag = JSON.parse(localStorage.getItem("registeredData"))||[];
+                let obj = {
+                    email,
+                    password,
+                    confirm
+                }
+                bag.push(obj);
+                console.log(obj);
+                localStorage.setItem("registeredData",JSON.stringify(bag));
+                document.querySelector("#email").value = "";
+                document.querySelector("#password").value = "";
+                document.querySelector("#confirm").value = "";
+                window.location = "file:///C:/Users/hp/Desktop/hard-mist-4433/index.html"
+            }
+        } else {
+            document.querySelector(".signup-container>div:first-child>div").style.display = "grid";
+            document.querySelector(".signup-container>div:first-child>div").style.transition = "0.14";
+            document.querySelector(".signup-container>div").style.height = "1000px";
+            document.querySelector("#btn").innerText = "Sign Up"
+        }
     }
+
 </script>

@@ -141,6 +141,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.loginbutton:hover{
+    border: 1px solid #526585;
+    color: #526585;
+}
 
 .loginbutton>a {
     text-decoration-line: none;

@@ -57,7 +57,7 @@
         }
 
         .signup-container>div {
-            height: 500px;
+            height: 600px;
         }
 
         .signup-container>div>h1 {
@@ -93,12 +93,13 @@
             cursor: pointer;
         }
 
-        .signup-container>div:first-child>input{
+        .signup-container>div:first-child>input {
             background-color: white;
             border: 1px solid #1e2b40;
             border-radius: 10px;
             text-align: left;
         }
+
         .signup-container>div:first-child>button:nth-child(2):hover,
         .signup-container>div:first-child>button:nth-child(3):hover,
         .signup-container>div:first-child>button:nth-child(4):hover {
@@ -116,7 +117,7 @@
             background-color: none;
         }
 
-        .signup-container>div:first-child>button:nth-child(6){
+        .signup-container>div:first-child>button:nth-child(6) {
             cursor: auto;
         }
 
@@ -126,7 +127,55 @@
         }
 
         .signup-container>div>div {
-           width: auto;
+            width: auto;
+        }
+
+        .button:hover,
+        #btn:hover {
+            background-color: rgb(154, 207, 158);
+            transition: 0.14s;
+        }
+
+        #btn {
+            background-color: rgb(94, 218, 102);
+            border: none;
+            color: white;
+            font-weight: bold;
+            margin-top: -15%;
+            margin-bottom: 20%;
+        }
+
+        .signup-container>div:first-child>div {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            width: 380px;
+            height: 100px;
+            margin: auto;
+            margin-top: -3%;
+        }
+
+        .signup-container>div:first-child>div>p {
+            height: 20px;
+            text-align: left;
+        }
+
+        .signup-container>div:first-child>div>p+input {
+            margin-top: -10%;
+            margin-bottom: 5%;
+            text-align: left;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        .block>p>span {
+            margin-left: 52%;
+            font-size: 14px;
+            color: rgba(73, 148, 245, 0.877);
+            cursor: pointer;
+        }
+
+        .block>p>span:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -149,9 +198,15 @@
             <button onclick="github()">Use Github account</button>
             <button onclick="office()">Use Office 365 account</button>
             <button>OR</button>
-            <input type="text" placeholder=" username or email">
-            <button class="button" style="background-color: rgb(94, 218, 102); border: none;">Next</button>
-            <p>Haven't received the confirmation email yet?<span>Resend the email</span></p>
+            <div class="block">
+                <p>Email</p>
+                <input type="email" id="email">
+                <p style="display: none;">Password<span>Forgot password?</span></p>
+                <input type="password" id="password" style="display: none;">
+                <p style="font-size: 14px; display: none;"><input type="checkbox" value="lsRememberMe"> Remember me</p>
+            </div>
+            <button id="btn" onclick="loginblock()">Next</button>
+            <p style="margin-top: -20%;">Haven't received the confirmation email yet?<span>Resend the email</span></p>
         </div>
         <div>
             <img src="https://assets.mailtrap.io/packs/assets/landing/login-fb2fcb15feb36d8e9356.svg" alt="1">
@@ -204,7 +259,8 @@
         <div style="display: block; text-align: left; margin-left: 32%; width: 900px;
         margin-top: -6%;">
             <h3 style="text-align: left;">What is Mailtrap?</h3>
-            <p style="text-align: left;">Mailtrap is a test mail server solution that allows testing email notifications without sending
+            <p style="text-align: left;">Mailtrap is a test mail server solution that allows testing email notifications
+                without sending
                 them to the real users of your application. Not only does Mailtrap work as a powerful email test
                 tool, it also lets you view your dummy emails online, forward them to your regular mailbox,
                 share with the team and more! Mailtrap is a mail server test tool built by Railsware Products,
@@ -217,15 +273,42 @@
 
 </html>
 <script>
-    function google(){
-        window.location='https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?access_type=offline&client_id=495126761595-3v7fijq7t51cguc5i8ibpi53ttik3j1l.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmailtrap.io%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email%20profile&state=63761f56a59d5b2fdd6577104d3ed56c53cbb9a839098212&service=lso&o2v=1&flowName=GeneralOAuthFlow';
+    function google() {
+        window.location = 'https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?access_type=offline&client_id=495126761595-3v7fijq7t51cguc5i8ibpi53ttik3j1l.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmailtrap.io%2Fauth%2Fgoogle_oauth2%2Fcallback&response_type=code&scope=email%20profile&state=63761f56a59d5b2fdd6577104d3ed56c53cbb9a839098212&service=lso&o2v=1&flowName=GeneralOAuthFlow';
     }
 
-    function github(){
-        window.location='https://github.com/login/oauth/authorize?client_id=744fecc5148a94851a58&redirect_uri=https%3A%2F%2Fmailtrap.io%2Fauth%2Fgithub%2Fcallback&response_type=code&scope=user%3Aemail&state=6226b09a3eea3175aa71c9c58de128fdb867b6bda4bc410b';
+    function github() {
+        window.location = 'https://github.com/login/oauth/authorize?client_id=744fecc5148a94851a58&redirect_uri=https%3A%2F%2Fmailtrap.io%2Fauth%2Fgithub%2Fcallback&response_type=code&scope=user%3Aemail&state=6226b09a3eea3175aa71c9c58de128fdb867b6bda4bc410b';
     }
 
-    function office(){
-        window.location='https://login.live.com/oauth20_authorize.srf?client_id=b2656ee8-e6f3-494b-bde9-5d9d9c8fcd84&scope=openid+email+profile+User.Read&redirect_uri=https%3a%2f%2fmailtrap.io%2fauth%2fmicrosoft_office365%2fcallback&response_type=code&state=25b449c6db5ef2148ff28e3d992e82b1f6c1208852a59206&uaid=d556749cc29f432289b7d476f5c3a1f1&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&epct=AQABAAAAAAD--DLA3VO7QrddgJg7Wevre-tkgW26RqkuK86oyPWy3LGaWCMro-7iweBYFvlL8NaJ2u6boM6ZUKMJens6FQ3lQ7I0kLfSaoGgE2uJ0ODlVAIidpY8YULDAaXkwYflA9gWwOKDTAF1AmvKjI3ddCqG_J5-kmUl4khiPBO7Il7j0DP1zM--5XtB4WN_-m7TvGHeIi_uL-oaaxdN6riGIA1t8-4sFSlHxy7l3gidqZEPwyAA&jshs=0';
+    function office() {
+        window.location = 'https://login.live.com/oauth20_authorize.srf?client_id=b2656ee8-e6f3-494b-bde9-5d9d9c8fcd84&scope=openid+email+profile+User.Read&redirect_uri=https%3a%2f%2fmailtrap.io%2fauth%2fmicrosoft_office365%2fcallback&response_type=code&state=25b449c6db5ef2148ff28e3d992e82b1f6c1208852a59206&uaid=d556749cc29f432289b7d476f5c3a1f1&msproxy=1&issuer=mso&tenant=common&ui_locales=en-US&epct=AQABAAAAAAD--DLA3VO7QrddgJg7Wevre-tkgW26RqkuK86oyPWy3LGaWCMro-7iweBYFvlL8NaJ2u6boM6ZUKMJens6FQ3lQ7I0kLfSaoGgE2uJ0ODlVAIidpY8YULDAaXkwYflA9gWwOKDTAF1AmvKjI3ddCqG_J5-kmUl4khiPBO7Il7j0DP1zM--5XtB4WN_-m7TvGHeIi_uL-oaaxdN6riGIA1t8-4sFSlHxy7l3gidqZEPwyAA&jshs=0';
+    }
+
+    function loginblock() {
+        if (document.querySelector("#btn").innerText == "Log In") {
+            console.log("HIi")
+            let email = document.querySelector("#email").value;
+            let password = document.querySelector("#password").value;
+            if (password == "") {
+                alert("please fill Email and password");
+            } else if (email == "vivekusangode@gmail.com" && password == "1218") {
+                window.location = "file:///C:/Users/hp/Desktop/hard-mist-4433/index.html"
+            }
+        } else {
+            console.log("done")
+            if (document.querySelector("#email").value != "") {
+                document.querySelector(".block>p:nth-child(3)").style.display = "block";
+                document.querySelector(".block>input:nth-child(4)").style.display = "grid";
+                document.querySelector(".block>p:nth-child(5)").style.display = "block";
+                document.querySelector(".signup-container>div").style.height = "800px";
+                document.querySelector(".signup-container>div:first-child>div").style.height = "300px"
+                document.querySelector("#btn").style.margintop = "-20%"
+                document.querySelector("#btn").innerText = "Log In"
+            }else{
+                alert("Please enter username or email")
+            }
+
+        }
     }
 </script>
